@@ -1,5 +1,5 @@
 (function(exports) {
-  exports.countChar = function(letter) {
+  exports.countChar = function(letter, word) {
     var totalLetters = 0;
     return function(string){
       for ( i=0; i<string.length; i++) {
