@@ -27,18 +27,12 @@
     return num > 1;
   };
 
-  exports.countChar = function(letter) {
+  exports.countChar = function(string,ch) {
     var totalLetters = 0;
-    return function(string){
-      for ( i=0; i<string.length; i++) {
-        if (string.charAt(i) === letter) {
-          totalLetters++;
-        }
-      }
-      return totalLetters;
-    }
-    var countLetters = countChar("b");
-    console.log(countLetters("brookebailey"));
+    for (var i = 0; i < string.length; i++)
+      if (string.charAt(i) == ch)
+        totalLetters += 1;
+    return totalLetters;
   };
 
   exports.isEven = function(x) {
@@ -148,6 +142,11 @@ var library = [
 brookesLibrary.myname();
 brookesLibrary.currentDate();
 brookesLibrary.createdFor();
+console.log(brookesLibrary.isPrime(23));
+console.log(brookesLibrary.countChar("brookebailey", "b"));
+console.log(brookesLibrary.isEven(9));
+brookesLibrary.fizz(10);
+brookesLibrary.read(library);
 console.log(brookesLibrary.min(7,2));
 console.log(brookesLibrary.monthName(3));
 console.log(brookesLibrary.range(1, 22, 4));
